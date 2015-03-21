@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="940a4e8c-5b8a-4f15-a4a4-3f96a2207357" name="Default" comment="adicionando imagens do menu, nova boneca e moviento da caixa&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jogo.lua" afterPath="$PROJECT_DIR$/jogo.lua" />
+    <list default="true" id="940a4e8c-5b8a-4f15-a4a4-3f96a2207357" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JogoEstagioI.iws" />
@@ -251,7 +250,11 @@
       <created>1426964255087</created>
       <updated>1426964255087</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adicionando imagens do menu, nova boneca e moviento da caixa&#10;">
+      <created>1426979040576</created>
+      <updated>1426979040576</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
