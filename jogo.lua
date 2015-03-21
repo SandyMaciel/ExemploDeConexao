@@ -20,15 +20,29 @@ physics.setGravity(0, 9.8)
 
 
 --> add background
-local background = display.newImage( "background.png" )
+local background = display.newImage( "background.jpg" )
 background:scale(display.contentWidth/background.contentWidth, display.contentHeight/background.contentHeight)         
 background.x = display.contentWidth/2         
 background.y = display.contentHeight/2
 
+
+--> Caixas para colisão 
+local caixa = display.newImage("caixa.png")
+caixa:scale(display.contentWidth/background.contentWidth, display.contentHeight/background.contentHeight)         
+caixa.x = display.contentWidth/2         
+caixa.y = display.contentHeight/2  
+---> caixa mover
+transition.to()
+
+
+
+
+
+
 --> Adiciona o personagem e  posiciona
-local person = display.newImage( "bnk2.png" )
-person.x = display.contentWidth - 880
-person.y = 120
+local person = display.newImage( "person.png" )
+person.x = display.contentWidth - 900
+person.y = 100
 physics.addBody( person, {bounce = 0, radius = 110, friction =1.0} )
 person.isFixedRotation = true
 
@@ -58,14 +72,13 @@ physics.addBody( topWall, "static", {density = 1.0, friction = 0.6, bounce = 0.2
 
 
 
---> Criando funcoes
---[[
-local function persontouch( event )
-	if ( event.phase == "began" ) then
-		person:applyForce( 10, -20, person.x, person.y )
-	end
-	return true
-end  ]]
+
+
+
+
+
+
+
 
 -- make jump forward
 local function onScreenTouch( event )
@@ -107,5 +120,6 @@ scene:addEventListener ("createScene", scene)
 scene:addEventListener ("enterScene", scene)
 scene:addEventListener ("exitScene", scene)
 scene:addEventListener ("destroyScene", scene)
+
 
 return scene

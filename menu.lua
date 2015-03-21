@@ -11,7 +11,7 @@ end
 function scene:createScene( event )
 	local group = self.view
 	
-	local background = display.newImage( "bnk.png" )
+	local background = display.newImage( "menu.png" )
      background:scale(display.contentWidth/background.contentWidth, display.contentHeight/background.contentHeight)         
      background.x = display.contentWidth/2         
      background.y = display.contentHeight/2
@@ -19,22 +19,23 @@ function scene:createScene( event )
 	 
 	 
 	 
-	local titulo = display.newText("SoftShoes", 0,0, "Monotype Corsiva",80)
-	--titulo:setTextColor(0.2, 0, 0)
+	--[[local titulo = display.newText("Shoeaholic", 0,0, "Garamond",80)
+	titulo:setTextColor(0, 0, 0)
 	titulo.x = centerX
 	titulo.y = display.screenOriginY+100
-	group:insert(titulo)
+	group:insert(titulo)]]--
 
-	local playBtn = display.newText("Play", 0, 0, "Monotype Corsiva", 50)
-	--playBtn:setTextColor(0.2, 0, 0)
+	local playBtn = display.newText("Play", 200, 0, "Garamond", 50)
+	--playBtn:setTextColor(0, 0, 0)
 	playBtn.x = centerX
 	playBtn.y = centerY
 	playBtn.destination = "jogo"
 	playBtn:addEventListener ("tap", apertarBotao)
 	group:insert(playBtn)
+	
 
-	local optionsBtn = display.newText("Acessórios", 0, 0, "Monotype Corsiva", 50)
-	--optionsBtn:setTextColor(0.2, 0, 0)
+	local optionsBtn = display.newText("Acessórios", 0, 0, "Garamond", 50)
+	--optionsBtn:setTextColor(0, 0, 0)
 	optionsBtn.x = centerX
 	optionsBtn.y = centerY + 80
 	optionsBtn.destination = "acessorios"
