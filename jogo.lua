@@ -20,7 +20,7 @@ physics.setGravity(0, 9.8)
 
 
 --> add background
-local background = display.newImage( "background.jpg" )
+local background = display.newImage( "background.png" )
 background:scale(display.contentWidth/background.contentWidth, display.contentHeight/background.contentHeight)         
 background.x = display.contentWidth/2         
 background.y = display.contentHeight/2
@@ -32,22 +32,17 @@ caixa:scale(display.contentWidth/background.contentWidth, display.contentHeight/
 caixa.x = display.contentWidth/2         
 caixa.y = display.contentHeight/2  
 ---> caixa mover
-transition.to()
-
-
-
-
 
 
 --> Adiciona o personagem e  posiciona
-local person = display.newImage( "person.png" )
+local person = display.newImage("person.gif")
 person.x = display.contentWidth - 900
 person.y = 100
 physics.addBody( person, {bounce = 0, radius = 110, friction =1.0} )
 person.isFixedRotation = true
 
 --> Adiciona o chão do jogo
-local floor = display.newImage( "ground.png" )
+local floor = display.newImage("ground.png")
 floor:scale(display.contentWidth/floor.contentWidth, display.contentHeight/4/floor.contentHeight)         
 floor.x = display.contentWidth - floor.contentWidth/2  
 floor.y = display.contentHeight - floor.contentHeight/2
@@ -70,16 +65,6 @@ topWall.x = display.contentWidth / 2
 topWall.y = 0
 physics.addBody( topWall, "static", {density = 1.0, friction = 0.6, bounce = 0.2} )
 
-
-
-
-
-
-
-
-
-
-
 -- make jump forward
 local function onScreenTouch( event )
 	if event.phase == "began" then
@@ -89,9 +74,6 @@ local function onScreenTouch( event )
 	end
 	return true
 end  
-
-
-
 
 
 --> event listeners
